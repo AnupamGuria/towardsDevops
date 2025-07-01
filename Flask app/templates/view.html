@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Data Table</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+      p {
+        text-align: center;
+        font-size: large;
+      }
+    </style>
+  </head>
+  <body>
+    <p>List of Registered user</p>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Email</th>
+          <th>Full Name</th>
+          <!-- Add more headers as needed -->
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in data %}
+        <tr>
+          <td>{{ row._id }}</td>
+          <td>{{ row.email }}</td>
+          <td>{{ row.fullname }}</td>
+          <!-- Add more columns as needed -->
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </body>
+</html>

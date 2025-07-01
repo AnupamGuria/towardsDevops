@@ -1,0 +1,21 @@
+my-flask-app
+   ├── static/
+   │   └── css/
+   │       └── main.css
+   ├── templates/
+   │   ├── index.html
+   │   └── student.html
+   ├── data.py
+   └── students.py
+
+Everything the app needs is in one folder(my-flask-app).The static folder contains assets used by the templates, including CSS files, JavaScript files, and images.
+The templates folder contains only templates. These have an .html extension.
+In addition to the static and templates folders, this app also contains .py files.These must be outside the two folders named static and templates.
+
+Here using jinja template library to render templates.
+render_template package is used to render the html file.
+
+In Flask (which is a tool made with Python to build websites), we use something called render_template to show an HTML file on the screen — kind of like saying, "Hey, show this webpage!"
+If you want to send some information (like a name or number) from your Python code to your HTML page (so it can show different stuff each time), you just write that info using commas and say what it is, like this:
+
+render_template("page.html", name="Anupam", age=25)

@@ -1,0 +1,14 @@
+In a monolithic application, the frontend and backend code can often be mixed together or tightly coupled within the same project or even the same files.While this might seem convenient at first for small projects or quick prototypes, it becomes hard to develop and maintain as the application grows.
+
+To improve organization, readability, and maintainability, it’s a good approach to separate the code into different segments or layers, such as:
+
+Frontend: Handles user interface and presentation.
+Backend: Contains business logic, APIs, and data processing.
+Data access layer / database scripts: Manages interaction with the database.
+
+This separation of concerns makes it:
+Easier to develop (different teams can work independently).
+Easier to debug and test (issues are isolated in a specific layer).
+Easier to maintain and scale (you can modify one part without affecting the others).
+
+A .env file should be inside the backend folder that contains mongodb connection string.
