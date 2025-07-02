@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>To-do Page</title>
+  </head>
+  <body>
+    <h2>To-Do Page</h2>
+
+    <form action="/submittodoitem" , method="post">
+      <label for="Item Name">Item Name </label><br />
+      <input type="text" id="itemname" name="itemname" /><br />
+      <label for="Item Description">Item Description</label><br />
+      <input type="text" id="itemdesc" name="itemdesc" /><br /><br />
+      <input type="submit" value="Submit" />
+    </form>
+
+    <p>
+      If you click the "Submit" button, the form-data will be sent to a mongodb.
+    </p>
+  </body>
+</html>
