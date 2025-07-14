@@ -1,0 +1,1 @@
+build image already uploaded on docker hub. No need to built it again. pull the images and run the docker-compose-dockerhub yaml file.
