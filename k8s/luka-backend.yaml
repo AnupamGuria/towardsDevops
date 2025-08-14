@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: luka-backend
+spec:
+  selector:
+    matchLabels:
+      app: luka-backend
+  template:
+    metadata:
+      labels:
+        app: luka-backend
+    spec:
+      containers:
+        - name: luka-backend
+          image: docker.io/guriaa/docker-backend:latest
+          resources:
+          ports:
+            - containerPort: 5000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: luka-backend
+spec:
+  selector:
+    app: luka-backend
+  ports:
+    - port: 5000
+      targetPort: 5000
